@@ -37,7 +37,7 @@ public class Producer {
     public static void main(String[] args) throws InterruptedException {
         //消息实体
         ProducerRecord<String , String> record = null;
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 1000; i++) {
             Thread.sleep(1000);
             record = new ProducerRecord<String, String>(TOPIC, "this ms no-"+(int)(10*(Math.random())));
             //发送消息

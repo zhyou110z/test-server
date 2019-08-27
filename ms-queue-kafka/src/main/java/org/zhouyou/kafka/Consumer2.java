@@ -1,5 +1,6 @@
 package org.zhouyou.kafka;
 
+import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
@@ -25,11 +26,11 @@ public class Consumer2 {
     private static Properties initConfig(){
         Properties properties = new Properties();
         properties.put("bootstrap.servers",BROKER_LIST);
-        properties.put("group.id","1");
+        properties.put("group.id","3");
         properties.put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
         properties.put("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
         properties.setProperty("enable.auto.commit", "true");
-        properties.setProperty("auto.offset.reset", "earliest");
+        properties.setProperty("auto.offset.reset", "latest");//earliest
         return properties;
     }
 
