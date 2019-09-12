@@ -7,11 +7,24 @@
   <groupId>org.zhouyou</groupId>
   <artifactId>test-server</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <packaging>pom</packaging>
+    <modules>
+        <module>test-demo</module>
+        <module>ms-queue-kafka</module>
+        <module>spring-boot-admin</module>
+        <module>spring-boot-admin-client</module>
+    </modules>
+    <packaging>pom</packaging>
 
   <name>test-server</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
+
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.1.0.RELEASE</version>
+    <relativePath/>
+  </parent>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

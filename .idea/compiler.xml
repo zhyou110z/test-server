@@ -6,8 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="ms-queue-kafka" />
+        <module name="opencv-demo" />
         <module name="order-service" />
         <module name="product-service" />
+        <module name="spring-boot-admin" />
+        <module name="spring-boot-admin-client" />
+        <module name="testdemo" />
         <module name="zipkin-server" />
       </profile>
     </annotationProcessing>
