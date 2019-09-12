@@ -1,18 +1,24 @@
 spring:
   application:
     name: admin-client
-  boot:
-    admin:
-      client:
-        url: http://192.168.1.95:8769
+
 server:
-  port: 8768
+  port: 8762
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    health-check-url-path: /actuator/health
+  client:
+    registryFetchIntervalSeconds: 5
+    service-url:
+      defaultZone: ${EUREKA_SERVICE_URL:http://192.168.1.52:8762}/eureka/
 
 management:
   endpoints:
     web:
       exposure:
-        include: '*'
+        include: "*"
   endpoint:
     health:
       show-details: ALWAYS
